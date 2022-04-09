@@ -1,0 +1,1 @@
+In this project directory are tasks purposed to prepare me for technical interviews.
