@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 ''' calculate minimum number of operations on a file '''
 
 
