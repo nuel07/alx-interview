@@ -9,7 +9,7 @@ def minOperations(n: int) -> int:
     Return: int
     '''
     num_ops = 0
-    ops = 2 ## copy All and Paste
+    ops = 2   # copy All and Paste
     while n > 1:
         while n % ops == 0:
             num_ops += ops
