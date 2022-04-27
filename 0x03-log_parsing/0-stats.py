@@ -3,7 +3,6 @@
 import sys
 
 
-
 def print_stats(codes, file_size):
     print("File size: {}".format(file_size))
     for key, val in sorted(codes.items()):
