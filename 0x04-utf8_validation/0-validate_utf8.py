@@ -8,9 +8,6 @@ def validUTF8(data) -> bool:
     for num in data:
         binary_rep = bin(num).replace('0b', '').rjust(8, '0')[-8:]
 
-        if next_bytes != 0 and not binary_rep.startswith('10'):
-            return False
-
         if next_bytes == 0:
             if binary_rep.startswith('11110'):
                 next_bytes = 3
@@ -20,5 +17,11 @@ def validUTF8(data) -> bool:
                 next_bytes = 1
             if binary_rep.startswith('10'):
                 return False
+        else:
+            if not binary_rep.startswith('10'):
+                return False
+            next_bytes -= 1
+    if next_bytes != 0:
+        return False
 
     return True
