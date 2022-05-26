@@ -6,5 +6,7 @@ def rotate_2d_matrix(matrix):
     rotates the matrix in place """
     mtrx_cp = matrix.copy()
     for p in range(len(matrix)):
-        colmn = [row[p] for row in mtrx_cp]
-        matrix[p] = colmn[::-1]
+        colmn = []
+        for row in mtrx_cp:
+            colmn.append(row[p])
+            matrix[p] = colmn[::-1]
