@@ -32,8 +32,8 @@ def isWinner(x: int, nums: list) -> str:
                 break
             if n + 1 == len(nums) and M_wins == 0 and B_wins == 0:
                 return None
-        if M_wins == B_wins:
-            return None
-        if M_wins > B_wins:
-            return "Maria"
-        return "Ben"
+    if M_wins == B_wins:
+        return None
+    if M_wins > B_wins:
+        return "Maria"
+    return "Ben"
