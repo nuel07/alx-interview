@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ Determine winner of the Prime Games """
 
+
 def isprime(n: int) -> bool:
     """ n(int): number to check if it is prime"""
-    for i in range(2, n):
+    for i in range(2, (n+1)//2):
         if n % i == 0:
             return False
     return True
