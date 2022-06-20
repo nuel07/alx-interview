@@ -10,7 +10,7 @@ def isprime(n: int) -> bool:
     return True
 
 
-def delete_numbers(n: int, nums: list):    
+def delete_numbers(n: int, nums: list):
     """ delete numbers - assign zero """
     for i in range(len(nums)):
         if nums[i] % n == 0:
@@ -28,21 +28,12 @@ def isWinner(x: int, nums: list) -> str:
     winner = False
     M_wins = 0
     B_wins = 0
-    
-    for game in range(x):    
+
+    for game in range(x):
         nums2 = list(range(1, nums[game] + 1))
         turn = 0
         while True:
-            """
-            # uncomment to monitor turns
-            if turn % 2 != 0:
-                print("Ben turn ")
-            else:
-                print("Maria turn ")
-
-            """
             change = False
-            
             for i, n in enumerate(nums2):
                 if n > 1 and isprime(n):
                     delete_numbers(n, nums2)
@@ -55,7 +46,7 @@ def isWinner(x: int, nums: list) -> str:
             M_wins += 1
         else:
             B_wins += 1
-            
+
     if M_wins == B_wins:
         return None
     if M_wins > B_wins:
